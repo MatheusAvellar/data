@@ -1,0 +1,179 @@
+:root {
+  /* [Ref] www.joshwcomeau.com/shadow-palette/ */
+  --shadow-color: 103deg 61% 46%;
+  --shadow-elevation-low:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+html {
+  font-family: Inter, Roboto, sans-serif;
+}
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", Roboto, sans-serif;
+  }
+}
+body {
+  color: #111;
+  background-color: #fcecfe;
+  /* [Ref] www.joshwcomeau.com/gradient-generator */
+  background-image: linear-gradient(
+    145deg,
+    hsl(103deg 100% 76%) 0%,
+    hsl(95deg 95% 75%) 9%,
+    hsl(87deg 90% 74%) 18%,
+    hsl(80deg 85% 74%) 27%,
+    hsl(74deg 80% 73%) 36%,
+    hsl(68deg 75% 73%) 45%,
+    hsl(62deg 71% 73%) 55%,
+    hsl(56deg 73% 75%) 64%,
+    hsl(51deg 79% 77%) 73%,
+    hsl(47deg 85% 79%) 82%,
+    hsl(43deg 89% 81%) 91%,
+    hsl(40deg 91% 82%) 100%
+  );
+}
+header, main, footer {
+  max-width: 800px;
+  margin: auto;
+}
+header {
+  padding: 1em 1em 0;
+  position: relative;
+}
+main {
+  padding: 1em;
+}
+footer {
+  padding: 0 1em 1em;
+}
+strong, b, h1, h2, h3, h4 {
+  font-weight: 600;
+}
+h1,h2,h3,h4, p {
+  margin: 0;
+}
+h2 {
+  margin-bottom: .5em;
+}
+#main-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+@media screen and (max-width: 780px) {
+  #main-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 1300px) {
+  header, main, footer {
+    max-width: 1200px;
+  }
+  #main-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+article {
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: var(--shadow-elevation-low);
+  border-radius: 8px;
+  transition: box-shadow .15s ease;
+}
+article:hover, article:active, article:focus-within {
+  box-shadow: var(--shadow-elevation-medium);
+}
+a[href] {
+  font-weight: 600;
+  color: #138276;
+  text-decoration: none;
+  padding: .1em .2em;
+  border-radius: 2px;
+}
+a[href]:hover, a[href]:focus, a[href]:active {
+  background-color: #138276;
+  color: #fff;
+}
+svg {
+  width: 1em;
+  margin-top: -0.2em;
+  vertical-align: middle;
+  fill: #111;
+}
+
+dt, dd {
+  display: inline-block;
+}
+dt {
+  font-weight: 600;
+}
+dd {
+  margin: 0;
+}
+dd a[href] {
+  margin-left: -0.2em;
+}
+
+a[href][rel="license"],
+a[href][rel="license"]:hover,
+a[href][rel="license"]:focus,
+a[href][rel="license"]:active {
+  background-color: unset;
+  color: unset;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.license {
+  text-align: right;
+  max-width: 250px;
+  margin-left: auto;
+  font-size: 85%;
+  margin-bottom: 1em;
+}
+.subtitle {
+  color: #086b60;
+}
+.links {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  margin-top: .5em;
+  margin-bottom: 0;
+  padding: 0;
+  gap: 0.1em 1em;
+}
+.links > li+li {
+  margin-top: .5em;
+}
+.sign {
+  text-align: right;
+  color: #086b60;
+  font-size: 85%;
+}
