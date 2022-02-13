@@ -29,10 +29,6 @@ html, body {
     font-family: "Inter var", Roboto, sans-serif;
   }
 }
-body {
-  color: #111;
-  background-color: #fcecfe;
-}
 header, main, footer {
   max-width: 800px;
   margin: auto;
