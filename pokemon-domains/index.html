@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pokémon Domains</title>
+  <meta content="Matheus Avellar" name="author">
+  <meta name="description" content="List of Pokémon names that can be domains">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <link rel="preconnect" href="https://rsms.me/" crossorigin>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <!-- Pikachu sprite by kriss80858/arsheraldica on DeviantArt:
+       deviantart.com/arsheraldica/art/Pikachu-sprite-348962643 -->
+  <header>
+    <nav>
+      <a href="https://data.avl.la">← go back</a>
+    </nav>
+    <h1>Pokémon Domains</h1>
+  </header>
+  <main>
+    <p>
+      This page contains 3 different datasets, all relating to Pokémon
+      and internet domains.
+    </p>
+    <dl id="dataset-description">
+      <dt><a href="everypokemon.csv">everypokemon.csv</a> (≈11&nbsp;KB)</dt>
+      <dd>
+        A list of every Pokémon name and their respective National Pokedéx numbers, as
+        present in Bulbapedia.
+      </dd>
+      <dt><a href="pokemondomains.csv">pokemondomains.csv</a> (≈13&nbsp;KB)</dt>
+      <dd>
+        A list of every Pokémon name that can become a domain (e.g. Pikachu -&zwj;> pikac.hu).
+        Includes the Pokémon's name, National Dex number, the TLD and the domain itself
+        (e.g. "25, Pikachu, HU, pikac.hu"). As of the last update, this list contains 515 domains.
+      </dd>
+      <dt><a href="pokemondomains+status.csv">pokemondomains+status.csv</a> (≈8&nbsp;KB)</dt>
+      <dd>
+        A list of the availability of each Pokémon domain; that is, if a program could
+        detect that they have been purchased. <strong>STATUSES MAY NOT BE 100% CORRECT</strong>.
+        Domains marked as available are not necessarily purchasable; the list only informs
+        if it could figure out they have been purchased. As of the last update, there are
+        78 TAKEN domains and 437 AVAIL domains.
+      </dd>
+    </dl>
+    <p class="timestamp">
+      Last updated: <time datetime="2022-02-16T05:57:13.090Z">16 February 2022</time>
+    </p>
+    <p>
+      <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
+        <img src="../cc0.png" alt="CC0">
+      </a>
+      This dataset is released as public domain.
+      <span class="help" title="Matheus Avellar (@aveiiar)">Attribution</span>
+      is appreciated but not required.
+    </p>
+    <hr>
+    <p>
+      This is what to expect from each dataset:
+    </p>
+    <div class="table-wrapper-wrapper">
+      <div class="table-wrapper" style="flex-grow:1">
+        <table data-indexed>
+          <caption>everypokemon.csv</caption>
+          <thead>
+            <tr>
+              <th>number</th>
+              <th>pokémon</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Bulbasaur</td></tr>
+            <tr><td>2</td><td>Ivysaur</td></tr>
+            <tr><td>3</td><td>Venusaur</td></tr>
+            <tr><td>4</td><td>Charmander</td></tr>
+            <tr><td>5</td><td>Charmeleon</td></tr>
+            <tr><td colspan="2" style="text-align:center">…</td></tr>
+            <tr><td>901</td><td>Ursaluna</td></tr>
+            <tr><td>902</td><td>Basculegion</td></tr>
+            <tr><td>903</td><td>Sneasler</td></tr>
+            <tr><td>904</td><td>Overqwil</td></tr>
+            <tr><td>905</td><td>Enamorus</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-wrapper" style="flex-grow:2">
+        <table data-indexed>
+          <caption>pokemondomains.csv</caption>
+          <thead>
+            <tr>
+              <th>number</th>
+              <th>pokémon</th>
+              <th>tld</th>
+              <th>domain</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>4</td><td>Charmander</td><td>ER</td><td>charmand.er</td></tr>
+            <tr><td>9</td><td>Blastoise</td><td>SE</td><td>blastoi.se</td></tr>
+            <tr><td>10</td><td>Caterpie</td><td>IE</td><td>caterp.ie</td></tr>
+            <tr><td>12</td><td>Butterfree</td><td>EE</td><td>butterfr.ee</td></tr>
+            <tr><td>12</td><td>Butterfree</td><td>FREE</td><td>butter.free</td></tr>
+            <tr><td colspan="4" style="text-align:center">…</td></tr>
+            <tr><td>899</td><td>Wyrdeer</td><td>ER</td><td>wyrde.er</td></tr>
+            <tr><td>901</td><td>Ursaluna</td><td>NA</td><td>ursalu.na</td></tr>
+            <tr><td>903</td><td>Sneasler</td><td>ER</td><td>sneasl.er</td></tr>
+            <tr><td>904</td><td>Overqwil</td><td>IL</td><td>overqw.il</td></tr>
+            <tr><td>905</td><td>Enamorus</td><td>US</td><td>enamor.us</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <caption>pokemondomains+status.csv</caption>
+        <thead>
+          <tr>
+            <th>domain</th>
+            <th>status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>abomas.now</td><td>AVAIL</td>
+          <tr><td>aegisla.sh</td><td>AVAIL</td>
+          <tr><td>aip.om</td><td>AVAIL</td>
+          <tr><td>alakaz.am</td><td>TAKEN</td>
+          <tr><td>alcrem.ie</td><td>AVAIL</td>
+          <tr><td colspan="4" style="text-align:center">…</td></tr>
+          <tr><td>zekr.om</td><td>AVAIL</td>
+          <tr><td>zor.ua</td><td>AVAIL</td>
+          <tr><td>zub.at</td><td>TAKEN</td>
+          <tr><td>zweilo.us</td><td>AVAIL</td>
+          <tr><td>zygar.de</td><td>TAKEN</td>
+        </tbody>
+      </table>
+      <p class="legend">
+        Possible values for <b>status</b> are: AVAIL, TAKEN and ERROR, for available domains,
+        domains which are not available, and domains for which the automatic check failed,
+        respectively.
+      </p>
+    </div>
+  </main>
+  <footer>
+    <p class="sign">
+      Made with ♥︎&#xFE0E;<!--&#xFE0E;[Ref] stackoverflow.com/a/38452396/4824627-->
+      by Matheus Avellar<br>Rio de Janeiro, 2022
+    </p>
+  </footer>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</body>
+</html>
