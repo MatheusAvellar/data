@@ -1,0 +1,179 @@
+html {
+  font-family: Inter, Roboto, sans-serif;
+}
+body {
+  color: #111;
+  background-color: #fafaf9;
+  /* [Ref] www.joshwcomeau.com/gradient-generator */
+  background-image: linear-gradient(
+    340deg,
+    hsl(27deg 100% 96%) 0%,
+    hsl(42deg 68% 96%) 33%,
+    hsl(50deg 43% 97%) 67%,
+    hsl(60deg 9% 98%) 100%
+  );
+}
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", Inter, Roboto, sans-serif;
+  }
+}
+header, main, footer {
+  max-width: 800px;
+  margin: auto;
+}
+header {
+  padding: 1em 1em 0;
+  position: relative;
+}
+header nav {
+  margin: 0 0 1em;
+}
+main {
+  padding: 1em;
+}
+footer {
+  padding: 0 1em 1em;
+}
+strong, b, h1, h2, h3, h4, a[href], dt {
+  font-weight: 600;
+}
+h1,h2,h3,h4,p {
+  margin: 0;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  margin-bottom: .5em;
+}
+main p {
+  margin: .5em 0;
+}
+
+a[href] {
+  color: #c02900;
+  text-decoration: none;
+  padding: .1em .2em;
+  border-radius: 2px;
+}
+a[href]:hover, a[href]:focus, a[href]:active {
+  background-color: #c02900;
+  color: #fff;
+}
+a[href][rel="license"],
+a[href][rel="license"]:hover,
+a[href][rel="license"]:focus,
+a[href][rel="license"]:active {
+  background-color: unset;
+  color: unset;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+[rel="license"] img {
+  vertical-align: middle;
+  height: 1.7em;
+}
+
+dl {
+  margin: 1em 0;
+  padding: 1em;
+  border: 2px solid #777;
+  background-color: #fefefe;
+  border-radius: 8px;
+}
+dt, dd {
+  display: inline-block;
+}
+dd+dt {
+  margin-top: 1em;
+}
+dd {
+  margin: 0;
+}
+hr {
+  height: 2.5px;
+  background-color: #111;
+  border: 0;
+  margin: 4rem auto 3rem;
+  width: 50%;
+}
+blockquote {
+  display: block;
+  margin: 1em 2.5em;
+}
+blockquote#pokelist {
+  max-height: 20em;
+  overflow-y: auto;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1em 0;
+  flex-basis: 0;
+}
+table {
+  background-color: #ffe4e4;
+  border-radius: 8px;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+table thead {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+}
+table th {
+  padding: .5em .5em;
+  text-align: center;
+  font-weight: 600;
+  font-size: .75em;
+}
+table th:first-of-type {
+  border-top-left-radius: 8px;
+}
+table th:last-of-type {
+  border-top-right-radius: 8px;
+}
+table td {
+  padding: .25em .5em;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: .75em;
+}
+tbody tr:nth-of-type(even) td {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 8px;
+}
+tbody tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 8px;
+}
+
+#sample-table-votecount tbody td:nth-of-type(1),
+#sample-table-votecount tbody td:nth-of-type(3),
+#sample-table-votecount tbody td:nth-of-type(4) {
+  text-align: right;
+}
+
+.credits, .sign, .timestamp {
+  text-align: right;
+  font-size: 85%;
+}
+.sign {
+  margin-top: 1em;
+}
+.help {
+  text-decoration: underline dotted rgba(0,0,0,.3);
+}
+.help:hover {
+  text-decoration: underline dotted rgba(0,0,0,.6);
+}

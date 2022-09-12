@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Best Pokémon</title>
+  <meta content="Matheus Avellar" name="author">
+  <meta name="description" content="Results of a series of Twitter polls on Pokémon preferences">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <link rel="preconnect" href="https://cdn.avl.la/" crossorigin>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://data.avl.la">← go back</a>
+    </nav>
+    <h1>Best Pokémon</h1>
+  </header>
+  <main>
+    <article>
+      <p>
+        This page contains multiple datasets, all relating to a series of
+        Twitter polls by <a href="https://twitter.com/OoCPokemon">Out of Context Pokemon</a>
+        to elect the best Pokémon. The top 4 best Pokémon, according to this
+        poll, were, from best to worst: Gengar, Mudkip, Snorlax and Wooper.
+      </p>
+      <p>
+        Here are the different datasets available:
+      </p>
+      <dl id="dataset-description">
+        <dt>
+          <a href="round1.csv">round1.csv</a> (≈2&nbsp;KB),<br>
+          <a href="round2.csv">round2.csv</a> (949&nbsp;B),<br>
+          <a href="round3.csv">round3.csv</a> (489&nbsp;B),<br>
+          <a href="quarter-finals.csv">quarter-finals.csv</a> (259&nbsp;B),<br>
+          <a href="semi-finals.csv">semi-finals.csv</a> (144&nbsp;B),<br>
+          <a href="finals+3rd-place.csv">finals+3rd-place.csv</a> (144&nbsp;KB)
+          <a href="all-rounds.csv">all-rounds.csv</a> (≈4&nbsp;KB)
+        </dt>
+        <dd>
+          A list of each bracket's results. Includes columns for National
+          Pokédex number (as "NatDex"), the Pokémon name ("Pokemon"), its
+          votes ("Votes") and corresponding percentages ("Percentage"). See
+          <b>§ What to expect</b> below for examples.
+        </dd>
+        <dt>
+          <a href="total-votes.csv">total-votes.csv</a> (≈1.2&nbsp;KB),<br>
+        </dt>
+        <dd>
+          A list of total vote counts for each Pokémon. Includes columns for
+          National Pokédex number (as "NatDex"), the Pokémon name ("Pokemon")
+          and its aggregated vote count across all polls ("Total votes").
+        </dd>
+      </dl>
+      <p class="timestamp">
+        Last updated: <time datetime="2022-09-12T19:00:00.000Z">12 September 2022</time>
+      </p>
+      <p>
+        <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
+          <img src="../cc0.png" alt="CC0">
+        </a>
+        This dataset is released as public domain.
+        <span class="help" title="Aster (@AsterShock), Matheus Avellar (@aveiiar)">Attribution</span>
+        is appreciated but not required.
+      </p>
+    </article>
+    <hr>
+    <article>
+      <h2>Context</h2>
+      <p>
+        On 8 September 2022, <b>Out of Context Pokemon</b> (@OoCPokemon) posted
+        a callout for people's favorite Pokémon <a href="https://twitter.com/OoCPokemon/status/1568027347466752001">on Twitter</a>.
+        The 64 Pokémon that received the most likes within a set timeframe then
+        became part of a bracket-style competition. In alphabetical order, they
+        were the following:
+      </p>
+      <blockquote id="pokelist">
+        <p>
+          Absol, Aggron, Alolan Vulpix, Ampharos, Appletun, Arcanine, Barboach,
+          Bulbasaur, Butterfree, Corviknight, Cragunk, Cyndaquil, Ditto,
+          Dracovish, Dragonite, Dratini, Eevee, Eiscue, Espeon, Flygon, Froslass,
+          Gastrodon, Gengar, Gible, Goodra, Grovyle, Klawf, Lapras, Latias,
+          Lechonk, Luxray, Magikarp, Maractus, Marshadow, Mawile, Mega Lopunny,
+          Mew, Mimikyu, Missingno, Mudkip, Oshawott, Porygon-Z, Quagsire, Raichu,
+          Riolu, Rowlet, Sableye, Sandile, Scizor, Skitty, Slowpoke, Snom,
+          Snorlax, Spheal, Sylveon, Torterra, Vaporeon, Venipede, Victini,
+          Wooper, Wurmple, Xurkitree, Zoroark, Zorua
+        </p>
+      </blockquote>
+      <p>
+        Over the next few days, several Twitter polls were conducted to assess
+        people's favorite Pokémon. The results of these polls is what constitutes
+        this dataset.
+      </p>
+      <p>These are the Twitter threads with the polls in question:</p>
+      <ol>
+        <li><a href="https://twitter.com/OoCPokemon/status/1568067845807808516">Round 1</a></li>
+        <li><a href="https://twitter.com/OoCPokemon/status/1568311951154991104">Round 2</a></li>
+        <li><a href="https://twitter.com/OoCPokemon/status/1568411953839710209">Round 3</a></li>
+        <li><a href="https://twitter.com/OoCPokemon/status/1568677024025419778">Quarter finals</a></li>
+        <li><a href="https://twitter.com/OoCPokemon/status/1568861443558195201">Semi-finals</a></li>
+        <li><a href="https://twitter.com/OoCPokemon/status/1569032584243429376">Finals and 3rd place</a></li>
+      </ol>
+    </article>
+    <article>
+      <h2>What to expect</h2>
+      <div class="table-wrapper">
+        <table id="sample-table-votecount">
+          <caption>round1.csv</caption>
+          <thead>
+            <tr>
+              <th>NatDex</th>
+              <th>Pokemon</th>
+              <th>Votes</th>
+              <th>Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>474</td><td>Porygon-Z</td><td>29,772</td><td>0.56377822</td></tr>
+            <tr><td>478</td><td>Froslass</td><td>23,036</td><td>0.43622178</td></tr>
+            <tr><td>551</td><td>Sandile</td><td>34,390</td><td>0.66719696</td></tr>
+            <tr><td>265</td><td>Wurmple</td><td>17,154</td><td>0.33280304</td></tr>
+            <tr><td colspan="4" style="text-align:center">…</td></tr>
+            <tr><td>543</td><td>Venipede</td><td>11,267</td><td>0.23626984</td></tr>
+            <tr><td>447</td><td>Riolu</td><td>36,420</td><td>0.76373016</td></tr>
+            <tr><td>501</td><td>Oshawott</td><td>21,459</td><td>0.43591931</td></tr>
+            <tr><td>722</td><td>Rowlet</td><td>27,768</td><td>0.56408069</td></tr>
+          </tbody>
+        </table>
+        <p class="legend">
+          Votes relate to <strong>individual 2-Pokémon polls</strong>. For example,
+          "Porygon-Z: 29,772 (56.38%)" and "Froslass: 23,036 (43.62%)" represent
+          one individual poll; while "Sandile: 34,390 (66.72%)" and "Wurmple:
+          17,154 (33.28%)" represent another.
+        </p>
+      </div>
+      <div class="table-wrapper">
+        <table id="sample-table-votecount">
+          <caption>total-votes.csv</caption>
+          <thead>
+            <tr>
+              <th>NatDex</th>
+              <th>Pokemon</th>
+              <th>Total votes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>94</td><td>Gengar</td><td>216,939</td></tr>
+            <tr><td>258</td><td>Mudkip</td><td>205,027</td></tr>
+            <tr><td>143</td><td>Snorlax</td><td>181,286</td></tr>
+            <tr><td>194</td><td>Wooper</td><td>179,396</td></tr>
+            <tr><td colspan="4" style="text-align:center">…</td></tr>
+            <tr><td>875</td><td>Eiscue</td><td>11,733</td></tr>
+            <tr><td>543</td><td>Venipede</td><td>11,267</td></tr>
+            <tr><td>?</td><td>Klawf</td><td>10,478</td></tr>
+            <tr><td>339</td><td>Barboach</td><td>5,236</td></tr>
+          </tbody>
+        </table>
+    </article>
+  </main>
+  <footer>
+    <p class="credits">
+      Data gathered by Aster (<a href="https://twitter.com/AsterShock">@AsterShock</a>) via the<br>
+      Out of Context Pokemon (<a href="https://twitter.com/OoCPokemon">@OoCPokemon</a>) account.
+    </p>
+    <p class="sign">
+      Made with ♥︎&#xFE0E;<!--&#xFE0E;[Ref] stackoverflow.com/a/38452396/4824627-->
+      by Matheus Avellar<br>Rio de Janeiro, 2022
+    </p>
+  </footer>
+  <link rel="stylesheet" href="https://cdn.avl.la/font/inter.css">
+</body>
+</html>
