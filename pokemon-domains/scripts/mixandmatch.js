@@ -65,7 +65,7 @@ pokemons.forEach((num_pk, i) => {
 
     // Lookup domain with WHOIS
     sleep(75 * i).then(() => {
-      exec(`timeout 60s jswhois ${domain}`, (error, stdout, stderr) => {
+      exec(`timeout 180s jswhois ${domain}`, (error, stdout, stderr) => {
         if(error) {
           console.log(`${_YELLOW}ERROR${_RESET} ${domain} :(`);
           pokemondomains[domain] = "ERROR";
@@ -79,7 +79,7 @@ pokemons.forEach((num_pk, i) => {
       // We've been missing .buzz because whois.iana.org
       // doesn't recurse to whois.nic.buzz...
       sleep(75 * i).then(() => {
-        exec(`timeout 60s jswhois -h whois.nic.${tld} ${domain}`, (error, stdout, stderr) => {
+        exec(`timeout 180s jswhois -h whois.nic.${tld} ${domain}`, (error, stdout, stderr) => {
           if(error) return;
           processDomain(JSON.parse(stdout));
         });
@@ -125,7 +125,8 @@ function waitloop() {
     const final = [];
     for(let key in pokemondomains) {
       final.push(`${key},${pokemondomains[key]}`);
-      if(pokemondomains[key] === "ERROR") {
+      if(pokemondomains[key] === "EMPTY"
+      || pokemondomains[key] === "ERROR") {
         errors.push(key);
       }
     }
@@ -153,11 +154,20 @@ function processDomain(data) {
   }
 
   const lookfor = [
-    "created", "changed", "status",
-    "expires", "creator", "dnssec",
-    "creationdate", "updateddate",
-    "expires", "registered", "lastmodified",
-    "registrar", "registryexpirydate"
+    "created", "creator", "creationdate",
+    "expire", "expires", "expirydate",
+    "changed", "status",
+    "updateddate", "lastupdated", "lastmodified",
+    "registered",
+    "registrar",
+    "registrarname",
+    "registrarcountry",
+    "registrarurl",
+    "registryexpirydate",
+    "nameserver", "nameservers",
+    "dnssec",
+    "email",
+    "person"
   ];
 
   let found = false;
@@ -168,14 +178,19 @@ function processDomain(data) {
     if(found)
       break;
 
-    const keys = Object.keys(data[whois]).length;
-    if(keys.length === 0) {
+    if(Object.keys(data[whois]).length === 0) {
       // articu.no was returning empty *SOMETIMES*
-      console.log(`${_YELLOW}ERROR${_RESET} ${domain} :(`);
-      pokemondomains[domain] = "ERROR";
+      console.log(`${_YELLOW}EMPTY${_RESET} ${domain}`);
+      pokemondomains[domain] = "EMPTY";
       return;
     }
-
+    for(const dmn of ["Domain", "domain", "DOMAIN"]) {
+      if(dmn in data[whois] && typeof data[whois].domain === "object") {
+        const { [dmn]: d, ...rest } = data[whois];
+        data[whois] = { ...d, ...rest };
+        break;
+      }
+    }
     for(let orig_key of Object.keys(data[whois])) {
       if(found)
         break;
@@ -195,7 +210,13 @@ function processDomain(data) {
   }
 
   if(!found) {
-    console.log(`${_GREEN}AVAIL${_RESET} ${domain}`);
+    const { "chain": _1, "query": _2, "whois.iana.org": _3, ...res } = data;
+    if(Object.keys(res).length === 0)
+      console.log(`${_GREEN}AVAIL${_RESET} ${domain}`);
+    else {
+      console.log(domain, res);
+      console.log();
+    }
     pokemondomains[domain] = "AVAIL";
   } else {
     console.log(`${_RED}TAKEN${_RESET} ${domain}`);
@@ -205,6 +226,6 @@ function processDomain(data) {
 
 function lowercaseASCII(str) {
   if(typeof str === "object") str = JSON.stringify(str);
-  return str.trim().toLowerCase().replace(/[^a-z]/gi, "");
+  return str.trim().toLowerCase().normalize("NFKD").replace(/[^a-z]/gi, "");
 }
 

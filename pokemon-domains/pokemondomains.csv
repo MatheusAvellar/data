@@ -1,10 +1,75 @@
-# Last updated: 2022-02-16T05:57:13.090Z
+# Last updated: 2022-11-18T22:33:59.721Z
 number,pokemon,tld,domain
+-1,Pawmo,MO,paw.mo
+-1,Annihilape,PE,annihila.pe
+-1,Kingambit,IT,kingamb.it
+-1,Toedscool,COOL,toeds.cool
+-1,Ceruledge,GE,ceruled.ge
+-1,Armarouge,GE,armarou.ge
+-1,Charcadet,ET,charcad.et
+-1,Tinkatink,INK,tinkat.ink
+-1,Chien-Pao,AO,chien-p.ao
+-1,Ting-Lu,LU,ting-.lu
+-1,Iron Jugulis,IS,ironjugul.is
+-1,Iron Moth,TH,ironmo.th
+-1,Iron Treads,ADS,irontre.ads
+-1,Slither Wing,NG,slitherwi.ng
+-1,Slither Wing,ING,slitherw.ing
+-1,Flutter Mane,NE,flutterma.ne
+-1,Scream Tail,IL,screamta.il
+-1,Brute Bonnet,NET,brutebon.net
+-1,Brute Bonnet,ET,brutebonn.et
+-1,Great Tusk,SK,greattu.sk
+-1,Gholdengo,NGO,gholde.ngo
+-1,Brambleghast,ST,bramblegha.st
+-1,Bramblin,IN,brambl.in
+-1,Fidough,GH,fidou.gh
+-1,Grafaiai,AI,grafai.ai
+-1,Glimmet,ET,glimm.et
+-1,Garganacl,CL,gargana.cl
+-1,Naclstack,CK,naclsta.ck
+-1,Nacli,LI,nac.li
+-1,Klawf,WF,kla.wf
+-1,Squawkabilly,LY,squawkabil.ly
+-1,Bombirdier,ER,bombirdi.er
+-1,Clodsire,RE,clodsi.re
+-1,Cyclizar,AR,cycliz.ar
+-1,Arctibax,AX,arctib.ax
+-1,Frigibax,AX,frigib.ax
+-1,Tandemaus,US,tandema.us
+-1,Revavroom,ROOM,revav.room
+-1,Revavroom,OM,revavro.om
+-1,Varoom,ROOM,va.room
+-1,Varoom,OM,varo.om
+-1,Bellibolt,LT,bellibo.lt
+-1,Tadbulb,LB,tadbu.lb
+-1,Scovillain,IN,scovilla.in
+-1,Capsakid,ID,capsak.id
+-1,Arboliva,VA,arboli.va
+-1,Palafin,IN,palaf.in
+-1,Veluza,ZA,velu.za
+-1,Wugtrio,RIO,wugt.rio
+-1,Wugtrio,IO,wugtr.io
+-1,Wiglett,TT,wigle.tt
+-1,Farigiraf,AF,farigir.af
+-1,Houndstone,ONE,houndst.one
+-1,Houndstone,NE,houndsto.ne
+-1,Rabsca,SCA,rab.sca
+-1,Rabsca,CA,rabs.ca
+-1,Spidops,PS,spido.ps
+-1,Tarountula,LA,tarountu.la
+-1,Oinkologne,NE,oinkolog.ne
+-1,Quaquaval,AL,quaquav.al
+-1,Quaxly,LY,quax.ly
+-1,Skeledirge,GE,skeledir.ge
+-1,Fuecoco,CO,fueco.co
+-1,Floragato,TO,floraga.to
+-1,Sprigatito,TO,sprigati.to
 4,Charmander,ER,charmand.er
 9,Blastoise,SE,blastoi.se
 10,Caterpie,IE,caterp.ie
-12,Butterfree,EE,butterfr.ee
 12,Butterfree,FREE,butter.free
+12,Butterfree,EE,butterfr.ee
 14,Kakuna,NA,kaku.na
 17,Pidgeotto,TO,pidgeot.to
 25,Pikachu,HU,pikac.hu
@@ -18,8 +83,8 @@ number,pokemon,tld,domain
 38,Ninetales,ES,ninetal.es
 41,Zubat,AT,zub.at
 42,Golbat,AT,golb.at
-43,Oddish,SH,oddi.sh
 43,Oddish,DISH,od.dish
+43,Oddish,SH,oddi.sh
 44,Gloom,OM,glo.om
 45,Vileplume,ME,vileplu.me
 46,Paras,AS,par.as
@@ -44,8 +109,8 @@ number,pokemon,tld,domain
 78,Rapidash,SH,rapida.sh
 79,Slowpoke,KE,slowpo.ke
 80,Slowbro,RO,slowb.ro
-85,Dodrio,RIO,dod.rio
 85,Dodrio,IO,dodr.io
+85,Dodrio,RIO,dod.rio
 87,Dewgong,NG,dewgo.ng
 87,Dewgong,ONG,dewg.ong
 88,Grimer,ER,grim.er
@@ -66,11 +131,11 @@ number,pokemon,tld,domain
 108,Lickitung,NG,lickitu.ng
 109,Koffing,ING,koff.ing
 109,Koffing,NG,koffi.ng
-110,Weezing,ING,weez.ing
 110,Weezing,NG,weezi.ng
+110,Weezing,ING,weez.ing
 114,Tangela,LA,tange.la
-119,Seaking,NG,seaki.ng
 119,Seaking,ING,seak.ing
+119,Seaking,NG,seaki.ng
 121,Starmie,IE,starm.ie
 122,Mr. Mime,ME,mrmi.me
 123,Scyther,ER,scyth.er
@@ -85,8 +150,8 @@ number,pokemon,tld,domain
 140,Kabuto,TO,kabu.to
 141,Kabutops,PS,kabuto.ps
 143,Snorlax,AX,snorl.ax
-144,Articuno,UNO,artic.uno
 144,Articuno,NO,articu.no
+144,Articuno,UNO,artic.uno
 146,Moltres,ES,moltr.es
 147,Dratini,NI,drati.ni
 148,Dragonair,IR,dragona.ir
@@ -106,8 +171,8 @@ number,pokemon,tld,domain
 193,Yanma,MA,yan.ma
 194,Wooper,ER,woop.er
 195,Quagsire,RE,quagsi.re
-199,Slowking,NG,slowki.ng
 199,Slowking,ING,slowk.ing
+199,Slowking,NG,slowki.ng
 200,Misdreavus,US,misdreav.us
 202,Wobbuffet,ET,wobbuff.et
 204,Pineco,ECO,pin.eco
@@ -118,8 +183,8 @@ number,pokemon,tld,domain
 211,Qwilfish,SH,qwilfi.sh
 214,Heracross,SS,heracro.ss
 216,Teddiursa,SA,teddiur.sa
-217,Ursaring,ING,ursar.ing
 217,Ursaring,NG,ursari.ng
+217,Ursaring,ING,ursar.ing
 218,Slugma,MA,slug.ma
 221,Piloswine,NE,piloswi.ne
 221,Piloswine,WINE,pilos.wine
@@ -141,8 +206,8 @@ number,pokemon,tld,domain
 259,Marshtomp,MP,marshto.mp
 261,Poochyena,NA,poochye.na
 262,Mightyena,NA,mightye.na
-264,Linoone,ONE,lino.one
 264,Linoone,NE,linoo.ne
+264,Linoone,ONE,lino.one
 267,Beautifly,LY,beautif.ly
 267,Beautifly,FLY,beauti.fly
 270,Lotad,AD,lot.ad
@@ -166,11 +231,11 @@ number,pokemon,tld,domain
 302,Sableye,YE,sable.ye
 308,Medicham,AM,medich.am
 309,Electrike,KE,electri.ke
-313,Volbeat,EAT,volb.eat
 313,Volbeat,AT,volbe.at
+313,Volbeat,EAT,volb.eat
 314,Illumise,SE,illumi.se
-316,Gulpin,PIN,gul.pin
 316,Gulpin,IN,gulp.in
+316,Gulpin,PIN,gul.pin
 319,Sharpedo,DO,sharpe.do
 320,Wailmer,ER,wailm.er
 323,Camerupt,PT,cameru.pt
@@ -186,8 +251,8 @@ number,pokemon,tld,domain
 337,Lunatone,ONE,lunat.one
 338,Solrock,CK,solro.ck
 339,Barboach,CH,barboa.ch
-340,Whiscash,SH,whisca.sh
 340,Whiscash,CASH,whis.cash
+340,Whiscash,SH,whisca.sh
 341,Corphish,SH,corphi.sh
 346,Cradily,LY,cradi.ly
 347,Anorith,TH,anori.th
@@ -232,8 +297,8 @@ number,pokemon,tld,domain
 433,Chingling,ING,chingl.ing
 433,Chingling,NG,chingli.ng
 434,Stunky,KY,stun.ky
-437,Bronzong,NG,bronzo.ng
 437,Bronzong,ONG,bronz.ong
+437,Bronzong,NG,bronzo.ng
 438,Bonsly,LY,bons.ly
 445,Garchomp,MP,garcho.mp
 446,Munchlax,AX,munchl.ax
@@ -246,8 +311,8 @@ number,pokemon,tld,domain
 459,Snover,ER,snov.er
 460,Abomasnow,NOW,abomas.now
 462,Magnezone,NE,magnezo.ne
-462,Magnezone,ZONE,magne.zone
 462,Magnezone,ONE,magnez.one
+462,Magnezone,ZONE,magne.zone
 463,Lickilicky,KY,lickilic.ky
 465,Tangrowth,TH,tangrow.th
 466,Electivire,RE,electivi.re
@@ -267,21 +332,21 @@ number,pokemon,tld,domain
 484,Palkia,KIA,pal.kia
 486,Regigigas,AS,regigig.as
 487,Giratina,NA,girati.na
-489,Phione,ONE,phi.one
 489,Phione,NE,phio.ne
+489,Phione,ONE,phi.one
 491,Darkrai,AI,darkr.ai
 492,Shaymin,IN,shaym.in
-493,Arceus,US,arce.us
 493,Arceus,EUS,arc.eus
+493,Arceus,US,arce.us
 494,Victini,NI,victi.ni
 496,Servine,NE,servi.ne
 500,Emboar,AR,embo.ar
 501,Oshawott,OTT,oshaw.ott
 501,Oshawott,TT,oshawo.tt
-502,Dewott,OTT,dew.ott
 502,Dewott,TT,dewo.tt
-503,Samurott,TT,samuro.tt
+502,Dewott,OTT,dew.ott
 503,Samurott,OTT,samur.ott
+503,Samurott,TT,samuro.tt
 504,Patrat,AT,patr.at
 507,Herdier,ER,herdi.er
 508,Stoutland,LAND,stout.land
@@ -375,8 +440,8 @@ number,pokemon,tld,domain
 658,Greninja,NINJA,gre.ninja
 659,Bunnelby,BY,bunnel.by
 660,Diggersby,BY,diggers.by
-661,Fletchling,NG,fletchli.ng
 661,Fletchling,ING,fletchl.ing
+661,Fletchling,NG,fletchli.ng
 662,Fletchinder,ER,fletchind.er
 663,Talonflame,ME,talonfla.me
 664,Scatterbug,UG,scatterb.ug
@@ -406,8 +471,8 @@ number,pokemon,tld,domain
 707,Klefki,KI,klef.ki
 708,Phantump,MP,phantu.mp
 710,Pumpkaboo,BOO,pumpka.boo
-711,Gourgeist,IST,gourge.ist
 711,Gourgeist,ST,gourgei.st
+711,Gourgeist,IST,gourge.ist
 713,Avalugg,GG,avalu.gg
 714,Noibat,AT,noib.at
 716,Xerneas,AS,xerne.as
@@ -417,8 +482,8 @@ number,pokemon,tld,domain
 720,Hoopa,PA,hoo.pa
 722,Rowlet,ET,rowl.et
 724,Decidueye,YE,decidue.ye
-726,Torracat,AT,torrac.at
 726,Torracat,CAT,torra.cat
+726,Torracat,AT,torrac.at
 727,Incineroar,AR,incinero.ar
 728,Popplio,IO,poppl.io
 729,Brionne,NE,brion.ne
@@ -430,8 +495,8 @@ number,pokemon,tld,domain
 740,Crabominable,ABLE,crabomin.able
 741,Oricorio,IO,oricor.io
 741,Oricorio,RIO,orico.rio
-742,Cutiefly,FLY,cutie.fly
 742,Cutiefly,LY,cutief.ly
+742,Cutiefly,FLY,cutie.fly
 743,Ribombee,EE,ribomb.ee
 747,Mareanie,IE,marean.ie
 751,Dewpider,ER,dewpid.er

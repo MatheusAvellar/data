@@ -15,19 +15,32 @@ con = urllib.request.urlopen(req)
 jsonresp = json.loads(con.read())
 wikitext = jsonresp["parse"]["wikitext"]["*"]
 
-result = re.findall(r"{{rdex\|[0-9A-Za-z\-]*\|([0-9]+)\|([^\|}]+)[\|0-9A-Za-z]*}}", wikitext)
+result = re.findall(r"{{ndex\|([0-9\-]+)\|([^\|]+)\|[^}]+}}", wikitext)
 print("Found", len(result), "Pokémon")
 
 filtered = []
 
-prev = 0
+prev = -1
 for i in range(len(result)):
-  index = int(result[i][0])
-  if index == prev:
-    continue
-  prev = index
+  if result[i][0] != "---":
+    index = int(result[i][0])
+    if index == prev:
+      continue
+    prev = index
+  else:
+    index = "N/A"
+    prev = -1
   pokename = result[i][1]
-  filtered.append(f"{index},{pokename}\n")
+
+  # Escape double quotes (if there ever is one)
+  if '"' in pokename:
+    pokename = pokename.replace('"', '\\"')
+
+  # Escape names with commas (if there ever is one)
+  if "," in pokename:
+    filtered.append(f"{index},\"{pokename}\"\n")
+  else:
+    filtered.append(f"{index},{pokename}\n")
 
 print("Fixed to", len(filtered), "Pokémon")
 
