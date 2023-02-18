@@ -31,7 +31,7 @@ html, body {
 }
 @supports (font-variation-settings: normal) {
   html {
-    font-family: "Inter var", Roboto, sans-serif;
+    font-family: "Inter var", Inter, Roboto, sans-serif;
   }
 }
 body {
